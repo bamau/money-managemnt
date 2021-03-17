@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-const ChartScreen = () => {
+const StatsScreen = () => {
   return (
     <View style={{flex: 1}}>
       <Text>Chart screen</Text>
@@ -9,4 +9,4 @@ const ChartScreen = () => {
   );
 };
 
-export default ChartScreen;
+export default StatsScreen;

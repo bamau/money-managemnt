@@ -1,5 +1,7 @@
 export const AppStrings = {
   nameHomeScreen: 'Home',
-  nameChartScreen: 'Chart',
+  nameStatsScreen: 'Stats',
+  nameAccountsScreen: 'Accounts',
+  nameSettingsScreen: 'Settings',
   appName: 'Money Management',
 };
