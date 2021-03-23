@@ -4,4 +4,8 @@ export const AppStrings = {
   nameAccountsScreen: 'Accounts',
   nameSettingsScreen: 'Settings',
   appName: 'Money Management',
+  daily: 'Daily',
+  calender: 'Calender',
+  weekly: 'Weekly',
+  monthly: 'Monthly',
 };
