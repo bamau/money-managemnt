@@ -11,79 +11,78 @@ import StatsScreen from './chart_screen/chart_screen';
 import AccountsScreen from './accounts_screen/accounts_screen';
 import SettingsScreen from './settings_screen/settings_screen';
 
-const HomeStack = createStackNavigator();
-const StatsStack = createStackNavigator();
-const AccountsStack = createStackNavigator();
-const SettingStack = createStackNavigator();
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function HomeStackScreen() {
   return (
-    <HomeStack.Navigator
+    <Stack.Navigator
       screenOptions={{
-        headerStyle: {backgroundColor: AppColors.backgroundHeaderColor},
+        headerStyle: {
+          backgroundColor: AppColors.backgroundHeaderColor,
+        },
         headerTintColor: '#fff',
       }}>
-      <HomeStack.Screen
+      <Stack.Screen
         name={AppStrings.nameHomeScreen}
         component={HomeScreen}
-        options={{title: 'Transaction'}}
+        options={{title: AppStrings.nameHomeScreen}}
       />
-    </HomeStack.Navigator>
+    </Stack.Navigator>
   );
 }
 
 function StatsStackScreen() {
   return (
-    <StatsStack.Navigator
+    <Stack.Navigator
       screenOptions={{
         headerStyle: {backgroundColor: AppColors.backgroundHeaderColor},
         headerTintColor: '#fff',
       }}>
-      <StatsStack.Screen
+      <Stack.Screen
         name={AppStrings.nameStatsScreen}
         component={StatsScreen}
         options={{title: 'Stats'}}
       />
-    </StatsStack.Navigator>
+    </Stack.Navigator>
   );
 }
 
 function AccountsStackScreen() {
   return (
-    <AccountsStack.Navigator
+    <Stack.Navigator
       screenOptions={{
         headerStyle: {backgroundColor: AppColors.backgroundHeaderColor},
         headerTintColor: '#fff',
       }}>
-      <AccountsStack.Screen
+      <Stack.Screen
         name={AppStrings.nameAccountsScreen}
         component={AccountsScreen}
         options={{title: 'Accounts'}}
       />
-    </AccountsStack.Navigator>
+    </Stack.Navigator>
   );
 }
 
 function SettingStackScreen() {
   return (
-    <SettingStack.Navigator
+    <Stack.Navigator
       screenOptions={{
         headerStyle: {backgroundColor: AppColors.backgroundHeaderColor},
         headerTintColor: '#fff',
       }}>
-      <SettingStack.Screen
+      <Stack.Screen
         name={AppStrings.nameSettingsScreen}
         component={SettingsScreen}
         options={{title: 'Settings'}}
       />
-    </SettingStack.Navigator>
+    </Stack.Navigator>
   );
 }
 
 const MainScreen = () => {
-  var today = new Date();
-  var nowDate = today.getDate() + '/' + (today.getMonth() + 1);
+  let today = new Date();
+  let nowDate = today.getDate() + '/' + (today.getMonth() + 1);
   return (
     <NavigationContainer>
       <Tab.Navigator

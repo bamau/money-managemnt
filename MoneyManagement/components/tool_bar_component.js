@@ -19,7 +19,7 @@ export default class ToolBarComponent extends Component {
 const styles = StyleSheet.create({
   toolBarStyle: {
     backgroundColor: 'green',
-    height: 30,
+    height: 35,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
