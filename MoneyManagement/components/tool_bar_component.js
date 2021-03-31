@@ -6,11 +6,11 @@ export default class ToolBarComponent extends Component {
   render() {
     return (
       <View style={styles.toolBarStyle}>
-        <MaterialCommunityIcons name="chevron-left" color="#fff" size={20} />
+        <MaterialCommunityIcons name="chevron-left" color="#fff" size={25} />
         <Text style={styles.titleToolBar}>
           {this.props.currentMonth}/{this.props.currentYear}
         </Text>
-        <MaterialCommunityIcons name="chevron-right" color="#fff" size={20} />
+        <MaterialCommunityIcons name="chevron-right" color="#fff" size={25} />
       </View>
     );
   }
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
   },
   titleToolBar: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: 15,
   },
 });

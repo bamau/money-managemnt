@@ -1,5 +1,5 @@
-import React from 'react';
 import 'react-native-gesture-handler';
+import React from 'react';
 import {AppStrings} from '../utils/app_strings';
 import {AppColors} from '../utils/app_colors';
 import {NavigationContainer} from '@react-navigation/native';

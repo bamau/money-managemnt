@@ -8,4 +8,5 @@ export const AppStrings = {
   calender: 'Calender',
   weekly: 'Weekly',
   monthly: 'Monthly',
+  summary: 'Summary',
 };

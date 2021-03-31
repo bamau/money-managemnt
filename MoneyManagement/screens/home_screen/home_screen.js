@@ -7,6 +7,9 @@ import ToolBarComponent from '../../components/tool_bar_component';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import DailyScreen from './daily_screen/daily_screen';
 import CalenderScreen from './calender_screen/calender_screen';
+import WeeklyScreen from './weekly_screen/weekly_screen';
+import MonthlyScreen from './monthly_screen/monthly_screen';
+import SummaryScreen from './summary_screen/summary_screen';
 
 const TopTap = createMaterialTopTabNavigator();
 
@@ -21,9 +24,15 @@ const HomeScreen = () => {
         initialRouteName={AppStrings.daily}
         tabBarOptions={{
           activeTintColor: AppColors.headerTintColor,
-          labelStyle: {fontWeight: 'bold'},
+          labelStyle: {
+            fontSize: 12,
+            textTransform: 'none',
+            margin: 0,
+          },
           indicatorStyle: {backgroundColor: AppColors.headerTintColor},
-          style: {backgroundColor: AppColors.backgroundHeaderColor},
+          style: {
+            backgroundColor: AppColors.backgroundHeaderColor,
+          },
         }}>
         <TopTap.Screen
           name={AppStrings.daily}
@@ -34,6 +43,21 @@ const HomeScreen = () => {
           name={AppStrings.calender}
           component={CalenderScreen}
           options={{tabBarLabel: AppStrings.calender}}
+        />
+        <TopTap.Screen
+          name={AppStrings.weekly}
+          component={WeeklyScreen}
+          options={{tabBarLabel: AppStrings.weekly}}
+        />
+        <TopTap.Screen
+          name={AppStrings.monthly}
+          component={MonthlyScreen}
+          options={{tabBarLabel: AppStrings.monthly}}
+        />
+        <TopTap.Screen
+          name={AppStrings.summary}
+          component={SummaryScreen}
+          options={{tabBarLabel: AppStrings.summary}}
         />
       </TopTap.Navigator>
     </SafeAreaView>
